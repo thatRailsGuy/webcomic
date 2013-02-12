@@ -1,0 +1,4 @@
+webcomic
+========
+
+A webcomic page
