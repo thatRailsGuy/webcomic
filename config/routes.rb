@@ -1,4 +1,11 @@
 Webcomic::Application.routes.draw do
+  
+  resources :comics
+
+
+  devise_for :users
+
+  root :to => "comics#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
