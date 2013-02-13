@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem 'devise'
 gem 'paperclip'
+gem 'will_paginate'
 
 
 # Gems used only for assets and not required
