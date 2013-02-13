@@ -1,4 +1,6 @@
 class Admin::ComicsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /comics
   # GET /comics.json
   def index

@@ -14,7 +14,10 @@
       <div class="nav-collapse collapse">
         <!-- Controllers with direct menu links -->
         <ul class="nav">
-          <li class="<%= "active" if controller_name == "comics"%>"><%= link_to "Comics", comics_path %></li>
+          <li class="<%= "active" if controller_name == "comics" && !admin?%>"><%= link_to "Comics", comics_path %></li>
+          <% if current_user %>
+              <li class="<%= "active" if controller_name == "comics" && admin?%>"><%= link_to "Admin", admin_comics_path %></li>
+          <% end %>
         </ul>
 
       </div>
