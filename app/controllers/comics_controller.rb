@@ -58,6 +58,7 @@ class ComicsController < ApplicationController
       # we want the RSS feed to redirect permanently to the ATOM feed
       format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
     end
+  end
 
   private
   def sort_column
