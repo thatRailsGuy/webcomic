@@ -10,6 +10,10 @@ Webcomic::Application.routes.draw do
       get 'latest'
     end
   end
+  
+  match '/feed' => 'comics#feed',
+    :as => :feed,
+    :defaults => { :format => 'atom' }
 
   devise_for :users
 

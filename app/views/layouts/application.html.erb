@@ -9,6 +9,8 @@
   <script>
       $.noConflict();
   </script>
+  <%= auto_discovery_link_tag :atom, "/feed" %>
+  <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 </head>
 <body>
     <%= render :partial => "layouts/top_bar" %>
