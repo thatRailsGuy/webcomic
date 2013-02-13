@@ -1,4 +1,4 @@
-<%= form_for(@comic) do |f| %>
+<%= form_for [:admin, @comic] do |f| %>
   <% if @comic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comic.errors.count, "error") %> prohibited this comic from being saved:</h2>
@@ -26,6 +26,6 @@
   </div>
   <div class="form-actions">
     <%= f.submit "Create", {:class=>"btn btn-primary"} %>
-    <%= link_to 'Back', comics_path, :class=>"btn" %>
+    <%= link_to 'Back', admin_comics_path, :class=>"btn" %>
   </div>
 <% end %>

@@ -1,7 +1,15 @@
 Webcomic::Application.routes.draw do
-  
-  resources :comics
 
+  namespace :admin do
+    resources :comics
+  end
+
+  resources :comics do
+    collection do
+      get 'first'
+      get 'latest'
+    end
+  end
 
   devise_for :users
 

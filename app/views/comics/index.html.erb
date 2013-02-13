@@ -11,9 +11,7 @@
   <tr>
     <td><%= comic.title %></td>
     <td><%= comic.description %></td>
-    <td><%= link_to 'Show', comic, :class=>"btn btn-info" %>
-    <%= link_to 'Edit', edit_comic_path(comic), :class=>"btn btn-warning" %>
-    <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
+    <td><%= link_to 'Show', comic, :class=>"btn btn-info" %></td>
   </tr>
 <% end %>
 </table>
