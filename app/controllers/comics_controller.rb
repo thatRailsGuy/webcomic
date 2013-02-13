@@ -1,8 +1,9 @@
 class ComicsController < ApplicationController
+  helper_method :sort_column, :sort_direction
   # GET /comics
   # GET /comics.json
   def index
-    @comics = Comic.all
+    @comics = Comic.order("#{sort_column} #{sort_direction}").paginate(:page => params[:page], :per_page => params[:page_size]||10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -38,5 +39,14 @@ class ComicsController < ApplicationController
       format.html { render 'show' }
       format.json { render json: @comic }
     end
+  end
+
+  private
+  def sort_column
+    Comic.column_names.include?(params[:sort]) ? params[:sort] : "updated_at"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ?  params[:direction] : "desc"
   end
 end

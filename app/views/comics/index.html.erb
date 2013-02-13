@@ -2,8 +2,9 @@
 
 <table class="table table-striped">
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th><%= sortable("title") %></th>
+    <th><%= sortable("description") %></th>
+    <th><%= sortable("created_at","Published") %></th>
     <th></th>
   </tr>
 
@@ -11,9 +12,11 @@
   <tr>
     <td><%= comic.title %></td>
     <td><%= comic.description %></td>
-    <td><%= link_to 'Show', comic, :class=>"btn btn-info" %></td>
+    <td><%= comic.created_at.in_time_zone("EST").strftime("%B %d %Y - %H:%M") %></td>
+    <td><%= link_to 'View', comic, :class=>"btn btn-info" %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
+<div>
+  <%= will_paginate @comics %>
+</div>
