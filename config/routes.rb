@@ -8,6 +8,7 @@ Webcomic::Application.routes.draw do
     collection do
       get 'first'
       get 'latest'
+      get 'random'
     end
   end
   

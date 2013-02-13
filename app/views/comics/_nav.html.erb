@@ -7,6 +7,8 @@
       <li class="divider-vertical"></li>
       <li><%=  link_to "Archive", comics_path %></li>
       <li class="divider-vertical"></li>
+      <li><%=  link_to "Random", random_comics_path %></li>
+      <li class="divider-vertical"></li>
       <li class="<%= "disabled" if !@comic.next?%>"><%= link_to "Next", @comic.next %></li>
       <li class="divider-vertical"></li>
       <li><%= link_to "Latest", latest_comics_path %></li>

@@ -41,6 +41,15 @@ class ComicsController < ApplicationController
     end
   end
   
+  def random
+    offset = rand(Comic.count)
+    @comic = Comic.first(:offset => offset)
+    respond_to do |format|
+      format.html { render 'show' }
+      format.json { render json: @comic }
+    end
+  end
+  
   def feed
     # this will be the name of the feed displayed on the feed reader
     # TODO add database driven title
