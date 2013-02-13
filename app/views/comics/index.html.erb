@@ -1,11 +1,9 @@
 <h1>Listing comics</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -13,13 +11,13 @@
   <tr>
     <td><%= comic.title %></td>
     <td><%= comic.description %></td>
-    <td><%= link_to 'Show', comic %></td>
-    <td><%= link_to 'Edit', edit_comic_path(comic) %></td>
-    <td><%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', comic, :class=>"btn btn-info" %>
+    <%= link_to 'Edit', edit_comic_path(comic), :class=>"btn btn-warning" %>
+    <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Comic', new_comic_path %>
+<%= link_to 'New Comic', new_comic_path, :class=>"btn btn-primary" %>

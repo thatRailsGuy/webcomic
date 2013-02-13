@@ -1,6 +1,6 @@
 <% if @comic.prev? %>
-  <%= link_to 'Previous', @comic.prev %> |
+  <%= link_to 'Previous', @comic.prev, :class=>"btn" %> |
 <% end %>
 <% if @comic.next? %>
-  <%= link_to 'Next', @comic.next %>
+  <%= link_to 'Next', @comic.next, :class=>"btn" %>
 <% end %>
