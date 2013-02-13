@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- TODO: Make all reference to title DB driven, so this is easily deployable as OSS? -->
   <title>Webcomic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<%= yield %>
-
+    <%= render :partial => "layouts/top_bar" %>
+    <div class="container-fluid">
+        <div class="span3 visible-desktop">
+          <!-- left spacer, desktop only -->
+        </div>
+        <div class="span6">
+            <p class="notice"><%= notice %></p>
+            <% if alert %>
+                <p class="alert"><%= alert %></p>
+            <% end %>
+            <%= yield %>
+        </div>
+        <div class="span3 visible-desktop">
+          <!-- right spacer, desktop only -->
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <!-- TODO: Probably break this out into a seperate template. Likely to escalate.. quickly -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <!-- Main site link -->
+      <%=link_to "Webcomic", root_path, :class=>"brand"%>
+      <!-- Main site link end -->
+      <!-- Site nav -->
+      <div class="nav-collapse collapse">
+        <!-- Controllers with direct menu links -->
+        <ul class="nav">
+          <li class="<%= "active" if controller_name == "brews"%>"><%= link_to "Comics", comics_path %></li>
+        </ul>
+
+      </div>
+      <!-- Site nav end -->
+    </div>
+  </div>
+</div>
