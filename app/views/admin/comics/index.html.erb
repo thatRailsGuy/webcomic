@@ -1,4 +1,11 @@
 <h1>Listing comics</h1>
+
+<div id="tag_cloud">
+  <% tag_cloud Comic.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, admin_tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+
 <div class="span6">
 <table class="table table-striped">
   <tr>

@@ -9,6 +9,7 @@ gem 'pg'
 gem 'devise'
 gem 'paperclip'
 gem 'will_paginate'
+gem 'acts-as-taggable-on'
 
 
 # Gems used only for assets and not required

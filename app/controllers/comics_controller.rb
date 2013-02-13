@@ -4,6 +4,10 @@ class ComicsController < ApplicationController
   # GET /comics.json
   def index
     @comics = Comic.order("#{sort_column} #{sort_direction}").paginate(:page => params[:page], :per_page => params[:page_size]||10)
+    
+    if params[:tag]
+      @comics = @comics.tagged_with(params[:tag])
+    end
 
     respond_to do |format|
       format.html # index.html.erb

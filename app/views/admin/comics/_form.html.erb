@@ -20,6 +20,10 @@
     <%= f.text_area :description, :rows=>3, :class=>"span5" %>
   </div>
   <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="field">
     <%= f.label :image %><br />
     <%= image_tag @comic.image.url() if @comic.image %><br />
     <%= f.file_field :image %>

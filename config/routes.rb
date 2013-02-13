@@ -12,6 +12,9 @@ Webcomic::Application.routes.draw do
     end
   end
   
+  get 'tags/:tag', to: 'comics#index', as: :tag
+  get 'admin_tags/:tag', to: 'admin/comics#index', as: :admin_tag
+  
   match '/feed' => 'comics#feed',
     :as => :feed,
     :defaults => { :format => 'atom' }

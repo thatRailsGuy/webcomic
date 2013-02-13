@@ -13,7 +13,9 @@
 #  image_updated_at   :datetime
 #
 class Comic < ActiveRecord::Base
-  attr_accessible :description, :title, :image
+  attr_accessible :description, :title, :image, :tag_list
+  acts_as_taggable
+  
   has_attached_file :image, 
     :styles => { :large => "600x600", :medium => "300x300>", :thumb => "100x100>" },
     :default_style => :large
