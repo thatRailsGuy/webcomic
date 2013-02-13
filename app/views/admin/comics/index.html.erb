@@ -1,5 +1,5 @@
 <h1>Listing comics</h1>
-
+<div class="span6">
 <table class="table table-striped">
   <tr>
     <th><%= sortable("title") %></th>
@@ -10,10 +10,10 @@
 
 <% @comics.each do |comic| %>
   <tr>
-    <td><%= comic.title %></td>
-    <td><%= comic.description %></td>
-    <td><%= comic.created_at.in_time_zone("EST").strftime("%B %d %Y - %H:%M") %></td>
-    <td><%= link_to 'Show', admin_comic_path(comic), :class=>"btn btn-info" %>
+    <td><%= comic.title.first(20) %></td>
+    <td><%= comic.description.first(20) %></td>
+    <td><%= comic.created_at.in_time_zone("EST").strftime("%b-%d-%y") %></td>
+    <td><%= link_to 'View', admin_comic_path(comic), :class=>"btn btn-info" %>
     <%= link_to 'Edit', edit_admin_comic_path(comic), :class=>"btn btn-warning" %>
     <%= link_to 'Destroy', admin_comic_path(comic), method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
   </tr>
@@ -21,6 +21,7 @@
 </table>
 <div>
   <%= will_paginate @comics %>
+</div>
 </div>
 <br />
 
