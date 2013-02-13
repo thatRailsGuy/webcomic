@@ -1,7 +1,12 @@
 Webcomic::Application.routes.draw do
 
   namespace :admin do
-    resources :comics
+    resources :comics do
+      collection do
+        get 'first'
+        get 'latest'
+      end
+    end
   end
 
   resources :comics do

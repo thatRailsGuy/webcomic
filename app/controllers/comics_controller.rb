@@ -28,7 +28,7 @@ class ComicsController < ApplicationController
   # GET /comics/first
   # GET /comics/first.json
   def first
-    @comic = Comic.first
+    @comic = Comic.order("created_at ASC").first
     respond_to do |format|
       format.html { render 'show' }
       format.json { render json: @comic }
@@ -38,7 +38,7 @@ class ComicsController < ApplicationController
   # GET /comics/latest
   # GET /comics/latest.json
   def latest
-    @comic = Comic.last
+    @comic = Comic.order("created_at ASC").last
     respond_to do |format|
       format.html { render 'show' }
       format.json { render json: @comic }

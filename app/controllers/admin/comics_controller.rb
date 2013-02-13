@@ -74,6 +74,26 @@ class Admin::ComicsController < ApplicationController
       end
     end
   end
+  
+  # GET /comics/first
+  # GET /comics/first.json
+  def first
+    @comic = Comic.order("created_at ASC").first
+    respond_to do |format|
+      format.html { render 'show' }
+      format.json { render json: @comic }
+    end
+  end
+
+  # GET /comics/latest
+  # GET /comics/latest.json
+  def latest
+    @comic = Comic.order("created_at ASC").last
+    respond_to do |format|
+      format.html { render 'show' }
+      format.json { render json: @comic }
+    end
+  end
 
   # DELETE /comics/1
   # DELETE /comics/1.json
