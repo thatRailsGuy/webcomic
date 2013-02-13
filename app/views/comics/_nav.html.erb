@@ -1,0 +1,6 @@
+<% if @comic.prev? %>
+  <%= link_to 'Previous', @comic.prev %> |
+<% end %>
+<% if @comic.next? %>
+  <%= link_to 'Next', @comic.next %>
+<% end %>
