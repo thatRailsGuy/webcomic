@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @comic.title %>
+  <h1><%= @comic.title %></h1>
+  <%= @comic.created_at.in_time_zone("EST").strftime("%B %d %Y - %H:%M") %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @comic.description %>
+	<%= image_tag @comic.image.url() %> 
 </p>
 
-
-<%= link_to 'Edit', edit_comic_path(@comic) %> |
-<%= link_to 'Back', comics_path %>
+<p>
+  <%= @comic.description %>
+</p>
