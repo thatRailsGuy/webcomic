@@ -78,7 +78,7 @@ class Admin::ComicsController < ApplicationController
     @comic.destroy
 
     respond_to do |format|
-      format.html { redirect_to comics_url }
+      format.html { redirect_to admin_comics_path }
       format.json { head :no_content }
     end
   end

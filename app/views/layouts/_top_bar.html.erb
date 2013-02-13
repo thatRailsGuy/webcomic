@@ -17,6 +17,7 @@
           <li class="<%= "active" if controller_name == "comics" && !admin?%>"><%= link_to "Comics", comics_path %></li>
           <% if current_user %>
               <li class="<%= "active" if controller_name == "comics" && admin?%>"><%= link_to "Admin", admin_comics_path %></li>
+              <li class="<%= "active" if controller_name == "comics" && admin?%>"><%= link_to "Log Out", destroy_user_session_path %></li>
           <% end %>
         </ul>
 
