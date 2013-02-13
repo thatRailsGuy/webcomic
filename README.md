@@ -15,6 +15,8 @@ Google Ads?
 
 add better styling to tags?
 
+add generic database items (title, author, etc)
+
 #DONE?
 
 Authentication to admin/comics controller. (Easier to have admin section that do it on specific actions)
