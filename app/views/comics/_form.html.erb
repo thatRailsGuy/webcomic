@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :image %><br />
-    <input id="comic_image" name="comic[image]" type="file">
+    <%= image_tag @comic.image.url() if @comic.image %><br />
+    <%= f.file_field :image %>
   </div>
   <div class="form-actions">
     <%= f.submit "Create", {:class=>"btn btn-primary"} %>
