@@ -16,3 +16,6 @@
 
 # Ignore all uploaded files
 /public/system
+
+config/webcomic.yml
+config/database.yml
