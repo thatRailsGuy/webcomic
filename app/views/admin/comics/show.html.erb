@@ -11,9 +11,12 @@
 <div class="description">
   <%= @comic.description %>
 </div>
+<br/>
 <div class="tags">
-  Tags: <%= raw @comic.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+  <%= raw @comic.tag_list.map { |t| link_to t, tag_path(t), :class => "tag btn" }.join('') %>
 </div>
+<br/>
+<br/>
 
 <%= render 'nav' %>
 

@@ -1,0 +1,8 @@
+<% first = " " %>
+<% tag_cloud Comic.tag_counts.sort { |x, y| x.name <=> y.name }, %w(x-small small normal large x-large) do |tag, css_class| %>
+  <% unless tag.name.starts_with?(first) %>
+    <br/><h3><%= tag.name[0] %></h3>
+  <% end %>
+  <% first = tag.name[0] %>
+  <%= link_to tag.name, tag_url( :tag => tag.name ), :class => css_class+" btn tag" %>
+<% end %>

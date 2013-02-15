@@ -58,5 +58,9 @@ module Webcomic
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # acts-as-taggable-on config
+    ActsAsTaggableOn.remove_unused_tags = true
+    
   end
 end
