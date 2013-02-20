@@ -19,3 +19,5 @@
 
 config/webcomic.yml
 config/database.yml
+
+.DS_Store
