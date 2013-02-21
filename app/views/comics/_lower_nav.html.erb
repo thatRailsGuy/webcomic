@@ -1,15 +1,41 @@
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<a class="addthis_button_rss_follow" addthis:userid="<%= feed_path %>"</a>
-<a class="addthis_button_reddit"></a>
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_twitter" tw:text="<%= request.protocol+request.host_with_port+request.fullpath %>"></a>
-<a class="addthis_button_pinterest_share"></a>
-<a class="addthis_button_google_plusone_badge"></a>
-<a class="addthis_button_email"></a>
-<a class="addthis_button_compact"></a>
-<a class="addthis_counter addthis_bubble_style"></a>
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li>
+        <%= link_to feed_path, :rel => "tooltip", :title => "atom feed" do %>
+          <i class="icon-rss"></i>
+        <% end %>
+      </li>
+      <li class="divider-vertical"></li>
+      <li>
+        <%= link_to "http://www.reddit.com/submit?url=#{comic_url(@comic)}", :rel => "tooltip", :title => "submit to reddit" do %>
+          <i class="icon-reddit"></i>
+        <% end %>
+      </li>
+      <li class="divider-vertical"></li>
+      <li>
+        <%= link_to "http://www.facebook.com/sharer.php?u=#{comic_url(@comic)}", :rel => "tooltip", :title => "share on facebook" do %>
+          <i class="icon-facebook"></i>
+        <% end %>
+      </li>
+      <li class="divider-vertical"></li>
+      <li>
+        <%= link_to "http://twitter.com/share?text=An%20Awesome%20Link&url=#{comic_url(@comic)}", :rel => "tooltip", :title => "tweet" do %>
+          <i class="icon-twitter"></i>
+        <% end %>
+      </li>
+      <li class="divider-vertical"></li>
+      <li>
+        <%= link_to "http://www.pinterest.com/pin/create/button/?url=#{comic_url(@comic)}", :rel => "tooltip", :title => "pin it" do %>
+          <i class="icon-pinterest"></i>
+        <% end %>
+      </li>
+      <li class="divider-vertical"></li>
+      <li>
+        <%= link_to "https://plus.google.com/share?url=#{comic_url(@comic)}", :rel => "tooltip", :title => "share on google+" do %>
+          <i class="icon-google-plus"></i>
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51266c335d518bed"></script>
-<!-- AddThis Button END -->
