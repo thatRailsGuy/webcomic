@@ -4,6 +4,11 @@ webcomic
 A webcomic page with twitter boot strap styles.
 
 
+A possibly up to date version is running at http://limitless-reef-8729.herokuapp.com/
+It deletes files so to see it in action, goto /admin, create or login to account, and add some new comics ( any image will do).
+
+
+
 #TODO
 
 Replace file_field with http://blueimp.github.com/jQuery-File-Upload/ (or at least a bootstrap hack such as
