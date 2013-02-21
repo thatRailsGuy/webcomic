@@ -24,6 +24,10 @@
     <%= f.text_field :tag_list %>
   </div>
   <div class="field">
+    <%= f.label :tooltip, "Tooltip" %><br />
+    <%= f.text_field :tooltip %>
+  </div>
+  <div class="field">
     <%= f.label :image %><br />
     <%= image_tag @comic.image.url() if @comic.image %><br />
     <%= f.file_field :image %>

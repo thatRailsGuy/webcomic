@@ -1,17 +1,41 @@
 <div class="navbar">
   <div class="navbar-inner">
     <ul class="nav">
-      <li><%= link_to "First", first_comics_path %></li>
+      <li>
+        <%= link_to first_comics_path, :rel => "tooltip", :title => "first comic" do %>
+          <i class="iconic-first"></i>
+        <% end %>
+      </li>
       <li class="divider-vertical"></li>
-      <li class="<%= "disabled" if !@comic.prev?%>"><%= link_to "Previous", @comic.prev %></li>
+      <li class="<%= "disabled" if !@comic.prev?%>">
+        <%= link_to @comic.prev, :rel => "tooltip", :title => "previous comic" do %>
+          <i class="icon-backward"></i>
+        <% end %>
+      </li>
       <li class="divider-vertical"></li>
-      <li><%=  link_to "Archive", comics_path %></li>
+      <li>
+        <%= link_to comics_path, :rel => "tooltip", :title => "comic archive" do %>
+          <i class="icon-th-list"></i>
+        <% end %>
+      </li>
       <li class="divider-vertical"></li>
-      <li><%=  link_to "Random", random_comics_path %></li>
+      <li>
+        <%= link_to random_comics_path, :rel => "tooltip", :title => "random comic" do %>
+          <i class="icon-random"></i>
+        <% end %>
+      </li>
       <li class="divider-vertical"></li>
-      <li class="<%= "disabled" if !@comic.next?%>"><%= link_to "Next", @comic.next %></li>
+      <li class="<%= "disabled" if !@comic.next?%>">
+        <%= link_to @comic.next, :rel => "tooltip", :title => "next comic" do %>
+          <i class="icon-forward"></i>
+        <% end %>
+      </li>
       <li class="divider-vertical"></li>
-      <li><%= link_to "Latest", latest_comics_path %></li>
+      <li>
+        <%= link_to latest_comics_path, :rel => "tooltip", :title => "latest comic" do %>
+          <i class="iconic-last"></i>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>

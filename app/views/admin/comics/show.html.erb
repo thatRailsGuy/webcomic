@@ -6,12 +6,11 @@
 <%= render 'nav' %>
 
 <div class="comic">
-	<%= image_tag @comic.image.url() %>
+  <%= image_tag @comic.image.url(), :rel => "tooltip", :title => @comic.tooltip %>
 </div>
 <div class="description">
-  <%= @comic.description %>
+  <p><%= @comic.description %></p>
 </div>
-<br/>
 <div class="tags">
   <%= raw @comic.tag_list.map { |t| link_to t, tag_path(t), :class => "tag btn" }.join('') %>
 </div>

@@ -13,7 +13,7 @@
 #  image_updated_at   :datetime
 #
 class Comic < ActiveRecord::Base
-  attr_accessible :description, :title, :image, :tag_list
+  attr_accessible :description, :title, :image, :tag_list, :tooltip
   acts_as_taggable
   
   has_attached_file :image, 

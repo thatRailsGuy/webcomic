@@ -2794,7 +2794,7 @@ input[type="submit"].btn.btn-mini {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../../../public/img/glyphicons-halflings.png");
+  background-image: url("glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2813,8 +2813,9 @@ input[type="submit"].btn.btn-mini {
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url("../../../public/img/glyphicons-halflings-white.png");
+  background-image: url("glyphicons-halflings-white.png");
 }
+
 .icon-glass {
   background-position: 0      0;
 }
@@ -3240,14 +3241,14 @@ input[type="submit"].btn.btn-mini {
 @font-face {
   font-family: IconicStroke;
   font-weight: normal;
-  src: url(../../../public/font/iconic_stroke.eot);
-  src: local('IconicStroke'), url(../../../public/font/iconic_stroke.eot?#iefix) format('embedded-opentype'), url(../../../public/font/iconic_stroke.woff) format('woff'), url(../../../public/font/iconic_stroke.ttf) format('truetype'), url(../../../public/font/iconic_stroke.svg#iconic) format('svg'), url(../../../public/font/iconic_stroke.otf) format('opentype');
+  src: url(iconic_stroke.eot);
+  src: local('IconicStroke'), url(iconic_stroke.eot?#iefix) format('embedded-opentype'), url(iconic_stroke.woff) format('woff'), url(iconic_stroke.ttf) format('truetype'), url(iconic_stroke.svg#iconic) format('svg'), url(iconic_stroke.otf) format('opentype');
 }
 @font-face {
   font-family: IconicFill;
   font-weight: normal;
-  src: url(../../../public/font/iconic_fill.eot);
-  src: local('IconicFill'), url(../../../public/font/iconic_fill.eot?#iefix) format('embedded-opentype'), url(../../../public/font/iconic_fill.woff) format('woff'), url(../../../public/font/iconic_fill.ttf) format('truetype'), url(../../../public/font/iconic_fill.svg#iconic) format('svg'), url(../../../public/font/iconic_fill.otf) format('opentype');
+  src: url(iconic_fill.eot);
+  src: local('IconicFill'), url(iconic_fill.eot?#iefix) format('embedded-opentype'), url(iconic_fill.woff) format('woff'), url(iconic_fill.ttf) format('truetype'), url(iconic_fill.svg#iconic) format('svg'), url(iconic_fill.otf) format('opentype');
 }
 @media screen, print {
   [class*="iconic-"] {
