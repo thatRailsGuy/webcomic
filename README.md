@@ -7,7 +7,7 @@ A webcomic page with twitter boot strap styles.
 A possibly up to date version is running at http://webcomic.herokuapp.com/
 It deletes files so to see it in action, goto /admin, create or login to account, and add some new comics ( any image will do).
 
-
+***
 
 ###TODO
 
